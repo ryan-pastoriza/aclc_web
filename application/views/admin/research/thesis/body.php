@@ -4,7 +4,7 @@
  * @Author: Gian
  * @Date:   2018-02-26 13:44:42
  * @Last Modified by:   Gian
- * @Last Modified time: 2018-12-19 11:10:57
+ * @Last Modified time: 2019-04-21 13:32:38
  */
 $this->load->view("admin/research/thesis/jscripts");
 ?>
@@ -14,6 +14,9 @@ $this->load->view("admin/research/thesis/jscripts");
         	<div class="admission-leftpane bg-white">
           		<div class="head-blue ptb-10 bg-blue"></div>
       			<ul>
+      				<li><a href="<?= base_url()?>index.php/admin/research/ried">Ried Multidisciplinary Research Journal</a><i class="fa fa-play"></i></li>
+        			<li><a href="<?= base_url()?>index.php/admin/research/rmrj">RMRJ Book and Abstract</a><i class="fa fa-play"></i></li>
+        			<li><a href="<?= base_url()?>index.php/admin/research/excel_news">Excel News</a><i class="fa fa-play"></i></li>
         			<li ><a href="<?= base_url()?>index.php/admin/research/capstone">Capstone</a><i class="fa fa-play"></i></li>
 		            <li class="active"><a href="<?= base_url()?>index.php/admin/research/thesis">Thesis</a><i class="fa fa-play"></i></li>
 		            <li><a href="<?= base_url()?>index.php/admin/research/case_studies">Case Studies</a></li>
@@ -38,7 +41,7 @@ $this->load->view("admin/research/thesis/jscripts");
 							</div>
 							<div class="form-group">
 								<label for="title" style="font-weight: normal;" class="c-gray">Upload PDF</label>
-								<input type="file" name="file" id="pdf" class="form-control" style="border-radius:0;" accept="application/pdf,application/vnd.ms-excel">
+								<input type="file" name="file" id="pdf" class="form-control" style="border-radius:0;">
 							</div>
 							<div class="form-group">
 								<label for="content" style="font-weight: normal;" class="c-gray">Content</label>

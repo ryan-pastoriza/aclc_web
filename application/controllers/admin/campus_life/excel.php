@@ -4,7 +4,7 @@
  * @Author: Gian
  * @Date:   2018-04-08 14:31:30
  * @Last Modified by:   Gian
- * @Last Modified time: 2018-09-21 10:48:23
+ * @Last Modified time: 2019-04-24 12:12:18
  */
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
@@ -194,7 +194,7 @@ class Excel extends MY_Controller {
             $config['file_name'] = $id;
             $config['upload_path'] = $uploadPath;
             $config['overwrite'] = TRUE;
-            $config['allowed_types'] = 'jpg|png|PNG|JPG';
+            $config['allowed_types'] = 'jpg|jpeg|png|PNG|JPG|JPEG';
             $this->load->library('upload', $config);
             $this->upload->initialize($config);
             $this->upload->do_upload('userfile');

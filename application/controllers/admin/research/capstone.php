@@ -4,7 +4,7 @@
  * @Author: Gian
  * @Date:   2018-02-28 10:03:50
  * @Last Modified by:   Gian
- * @Last Modified time: 2018-06-07 20:15:39
+ * @Last Modified time: 2019-04-21 13:09:05
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
@@ -41,21 +41,55 @@ class Capstone extends MY_Controller {
 			$caps->summary = $this->input->post("content");
 			$caps->date_published = $this->input->post('date_published');
 			$caps->date_posted = date("Y-m-d h:i:s A");
-
+			$caps->save();
+			if ((isset($_FILES['file']) && !($_FILES['file']['name']) == "")){
+            	$this->save_file($this->input->post('caps_id'));
+	        }
 			$ret['msg'] = "content update!";
 			$ret['successMsg'] = "success";
-			$caps->save();
 		}else{
 			$caps->title = $this->input->post("title");
 			$caps->summary = $this->input->post('content');
 			$caps->date_published = $this->input->post('date_published');
 			$caps->date_posted = date("Y-m-d");
+			$caps->save();
+			if ((isset($_FILES['file']) && !($_FILES['file']['name']) == "")){
+            	$this->save_file($caps->caps_id);
+	        }
 			$ret['msg'] = "content saved!";
 			$ret['successMsg'] = "success";
-			$caps->save();
 		}
 		
 		echo json_encode($ret);
+	}
+	public function save_file($id){
+
+		$this->load->model('caps');
+		$caps = new Caps;
+
+		$_FILES['userfile']['name'] = $_FILES['file']['name'];
+        $_FILES['userfile']['type'] = $_FILES['file']['type'];
+        $_FILES['userfile']['tmp_name'] = $_FILES['file']['tmp_name'];
+        $_FILES['userfile']['error'] = $_FILES['file']['error'];
+        $_FILES['userfile']['size'] = $_FILES['file']['size'];
+
+        $uploadPath = 'plugins/images/research/capstone/';
+        $caps->load($id);
+        // if($ext[1] == "pdf" || $ext[1] == "PDF"){
+        $caps->img_path = $id."-".$_FILES['userfile']['name'];
+        // }else{
+        //     $caps->img_path = $id.".".$ext[1];
+        // }
+        $caps->save();
+        $config['file_name'] = $id."-".$_FILES['userfile']['name'];
+        $config['upload_path'] = $uploadPath;
+        $config['overwrite'] = TRUE;
+        $config['allowed_types'] = 'pdf|doc|docx';
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        if($this->upload->do_upload('userfile')){
+
+        }
 	}
 }
 

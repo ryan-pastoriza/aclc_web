@@ -23,7 +23,8 @@
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right pr-20">
-		        <li><a href="#" class="c-white f-12">Pre-Registration</a></li>
+        		<li><a href="<?= base_url()?>index.php/public/pre_registration">Pre-Registration</a></li>
+		        <!-- <li><a href="" class="c-white f-12">Pre-Registration</a></li> -->
 		        <li><a href="#" class="c-white f-12">Queueing</a></li>
 		        <li><a href="#" class="c-white f-12">Careers</a></li>
 		        <li><a href="#" class="c-white f-12">SIS</a></li>
@@ -337,7 +338,7 @@
 							<h4>News & Publications</h4>
 							<ul>
 								<li><a href="">Latest News</a></li>
-								<li><a href="">The Gold Panicles</a></li>
+								<li><a href="">Excel News</a></li>
 								<li><a href="">Annual Accomplishment Reports</a></li>
 							</ul>
 						</div>

@@ -4,7 +4,7 @@
  * @Author: Gian
  * @Date:   2018-04-17 01:21:14
  * @Last Modified by:   Gian
- * @Last Modified time: 2018-11-22 15:22:00
+ * @Last Modified time: 2019-04-21 12:53:55
  */
 ?>
 <script>
@@ -28,6 +28,7 @@ $(function(){
 	   			$('#btn-save').html("Saving..")
 	   		},
 	   		success:function(data){
+	   			// console.log(data)
 	   			if(data.successMsg == "success"){
 	   				setTimeout(function() {
 		                toastr.options = {

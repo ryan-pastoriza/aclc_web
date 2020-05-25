@@ -4,7 +4,7 @@
  * @Author: Gian
  * @Date:   2018-12-19 11:07:47
  * @Last Modified by:   Gian
- * @Last Modified time: 2018-12-20 14:56:44
+ * @Last Modified time: 2019-04-21 13:23:31
  */
 if (!defined('BASEPATH')) exit('No direct script access allowed');
 
@@ -47,7 +47,7 @@ class Science_Investigatory extends CI_Controller {
 			$caps->date_posted = date("Y-m-d h:i:s A");
 			$caps->save();
 			if ((isset($_FILES['file']) && !($_FILES['file']['name']) == "")){
-                $this->upload_pdf($caps->sci_id);
+                $this->save_file($caps->sci_id);
                 $ret['msg'] = "content update!";
 				$ret['successMsg'] = "success";
             }else{
@@ -62,7 +62,7 @@ class Science_Investigatory extends CI_Controller {
 			$caps->date_posted = date("Y-m-d");
 			$caps->save();
 			if ((isset($_FILES['file']) && !($_FILES['file']['name']) == "")){
-                $this->upload_pdf($caps->sci_id);
+                $this->save_file($caps->sci_id);
                 $ret['msg'] = "content update!";
 				$ret['successMsg'] = "success";
             }else{
@@ -74,29 +74,35 @@ class Science_Investigatory extends CI_Controller {
 		echo json_encode($ret);
 	}
 
-	public function upload_pdf($id){
-		$this->load->model('science_invest');
-        $caps = new Science_Invest;
+	
+	public function save_file($id){
 
-        $_FILES['userfile']['name'] = $_FILES['file']['name'];
+		$this->load->model('rieds');
+		$caps = new Rieds;
+
+		$_FILES['userfile']['name'] = $_FILES['file']['name'];
         $_FILES['userfile']['type'] = $_FILES['file']['type'];
         $_FILES['userfile']['tmp_name'] = $_FILES['file']['tmp_name'];
         $_FILES['userfile']['error'] = $_FILES['file']['error'];
         $_FILES['userfile']['size'] = $_FILES['file']['size'];
 
         $uploadPath = 'plugins/images/research/science_investigatory_project/';
-        $ext = explode("/", $_FILES['userfile']['type']);
         $caps->load($id);
-        $caps->img_path = $id.".pdf";
+        // if($ext[1] == "pdf" || $ext[1] == "PDF"){
+        $caps->img_path = $id."-".$_FILES['userfile']['name'];
+        // }else{
+        //     $caps->img_path = $id.".".$ext[1];
+        // }
         $caps->save();
-        $config['file_name'] = $id;
+        $config['file_name'] = $id."-".$_FILES['userfile']['name'];
         $config['upload_path'] = $uploadPath;
         $config['overwrite'] = TRUE;
-        $config['allowed_types'] = 'pdf|PDF';
+        $config['allowed_types'] = 'pdf|doc|docx';
         $this->load->library('upload', $config);
         $this->upload->initialize($config);
+        if($this->upload->do_upload('userfile')){
 
-       	$this->upload->do_upload('userfile');
+        }
 	}
 }
         

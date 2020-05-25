@@ -4,7 +4,7 @@
  * @Author: Gian
  * @Date:   2018-06-14 10:33:10
  * @Last Modified by:   Gian
- * @Last Modified time: 2018-12-20 15:21:23
+ * @Last Modified time: 2019-04-21 14:33:39
  */
 ?>
 <?php
@@ -68,7 +68,7 @@
 		        <!-- <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>    -->                     
 		      </button>
-		      <a class="navbar-brand" href="<?= base_url()?>""><img src="<?= base_url()?>plugins/images/logo.png" alt=""></a>
+		      <a class="navbar-brand" href="<?= base_url()?>"><img src="<?= base_url()?>plugins/images/logo.png" alt=""></a>
 		    </div>
 		    <div class="collapse navbar-collapse" id="myNavbar">
 		      <ul class="nav navbar-nav navbar-right pr-20">
@@ -117,8 +117,11 @@
 						<div class="admission-leftpane bg-white">
 							<div class="head-blue ptb-10 bg-blue"></div>
 							<ul>
+								<li ><a href="<?= base_url()?>index.php/public/research/ried">Ried Multidisciplinary Research Journal</a></i></li>
+								<li ><a href="<?= base_url()?>index.php/public/research/rmrj">RMRJ Book and Abstract</a></i></li>
+								<li ><a href="<?= base_url()?>index.php/public/research/research_excel_news">Excel News</a></i></li>
 								<li ><a href="<?= base_url()?>index.php/public/research">Capstone</a></i></li>
-								<li ><a href="">Thesis</a><i class="fa fa-play"></i></li>
+								<li><a href="<?= base_url()?>index.php/public/thesis">Thesis</a><i class="fa fa-play"></i></li>
 								<li><a href="<?= base_url()?>index.php/public/research_case_study">Case Studies</a><i class="fa fa-play"></i></li>
 								<li class="active"><a href="<?= base_url()?>index.php/public/research_institutional">Institutional</a><i class="fa fa-play"></i></li>
 								<li><a href="<?= base_url()?>index.php/public/research/science_investigatory">Science Investigatory Project</a><i class="fa fa-play"></i></li>

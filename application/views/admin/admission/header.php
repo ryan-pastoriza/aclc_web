@@ -147,7 +147,7 @@
         <li><a href="<?= base_url()?>index.php/admin/research/capstone">Research</a></li>
         <li><a href="<?= base_url()?>index.php/admin/campus_life/school_activities">Campus Life</a></li>
         <li><a href="contact_us.html">Contact Us</a></li>
-        <li><a href="pre_registration.html">Pre-Registration</a></li>
+        <li><a href="<?= base_url()?>index.php/admin/pre_registration/pre_registration">Pre-Registration</a></li>
         <li><a href="queuing.html">Queuing</a></li>
         <li><a href="career.html">Careers</a></li>
       </ul>

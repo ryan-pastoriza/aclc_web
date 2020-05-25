@@ -150,7 +150,7 @@
         <li><a href="<?= base_url()?>index.php/admin/research/capstone">Research</a></li>
         <li><a href="<?= base_url()?>index.php/admin/campus_life/school_activities">Campus Life</a></li>
         <li><a href="<?= base_url()?>index.php/admin/contact_us/contact">Contact Us</a></li>
-        <li><a href="#">Pre-Registration</a></li>
+        <li><a href="<?= base_url()?>index.php/admin/pre_registration/pre_registration">Pre-Registration</a></li>
         <li><a href="#">Queuing</a></li>
         <li><a href="#">Careers</a></li>
       </ul>

@@ -149,7 +149,7 @@
         <li><a href="<?= base_url()?>index.php/admin/research/capstone" style="color:#ff003b8a !important;">Research</a></li>
         <li><a href="<?= base_url()?>index.php/admin/campus_life/school_activities">Campus Life</a></li>
         <li><a href="<?= base_url()?>index.php/admin/contact_us/contact">Contact Us</a></li>
-        <li><a href="<?= base_url()?>index.php/admin/pre_registration/capstone">Pre-Registration</a></li>
+        <li><a href="<?= base_url()?>index.php/admin/pre_registration/pre_registration">Pre-Registration</a></li>
         <li><a href="<?= base_url()?>index.php/admin/queuing/capstone">Queuing</a></li>
         <li><a href="<?= base_url()?>index.php/admin/career/capstone">Careers</a></li>
       </ul>
