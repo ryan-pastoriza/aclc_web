@@ -11,7 +11,7 @@
     <div class="row">
     	<div class="col-md-24">
 			<div class="mid-content ptb-10 bg-white oh">
-				<h3 class="normal c-gray f-20 bb" style="border-bottom:none;padding-top:10px;">Pre-Registration Dashboard</h3>
+				<h2 class="normal c-gray bb" style="border-bottom:none;padding-top:10px;">Pre-Registration Dashboard</h2>
 			</div>
 		</div>
 	</div>
@@ -66,7 +66,39 @@
 						</div>
 					</div>
 				</div> -->
-				<div class="col-md-12">
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-md-24">
+							<div class="mid-content ptb-10 bg-white oh c-gray normal bb">
+								<h5>Summary</h5>
+							</div>
+						</div>
+					</div>
+					<div class="row" >
+						<div class="col-md-24" >
+							<div class="mid-content ptb-10  oh c-gray normal bb bg-white">
+								<canvas id="myChart" width="500" height="200"></canvas>
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class="col-md-8">
+					<div class="row">
+						<div class="col-md-24">
+							<div class="mid-content ptb-10 bg-white oh c-gray normal bb">
+								<h5>Individual</h5>
+							</div>
+						</div>
+					</div>
+					<div class="row" >
+						<div class="col-md-24" >
+							<div class="mid-content ptb-10  oh c-gray normal bb bg-white">
+								<!-- CONTENT HERE -->
+							</div>
+						</div>	
+					</div>
+				</div>
+				<div class="col-md-8">
 					<div class="row">
 						<div class="col-md-24">
 							<div class="mid-content ptb-10 bg-white oh c-gray normal bb">
@@ -77,7 +109,7 @@
 					<div class="row" >
 						<div class="col-md-24" >
 							<div class="mid-content ptb-10  oh c-gray normal bb bg-white">
-								<canvas id="myChart" width="500" height="200"></canvas>
+								<!-- CONTENT HERE -->
 							</div>
 						</div>	
 					</div>
