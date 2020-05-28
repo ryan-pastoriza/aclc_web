@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : Local Connection
+ Source Server         : localhost
  Source Server Type    : MySQL
  Source Server Version : 100138
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 100138
  File Encoding         : 65001
 
- Date: 28/05/2020 15:23:24
+ Date: 28/05/2020 22:42:45
 */
 
 SET NAMES utf8mb4;
@@ -262,10 +262,6 @@ CREATE TABLE `account`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
--- Records of account
--- ----------------------------
-
--- ----------------------------
 -- Table structure for add_cont
 -- ----------------------------
 DROP TABLE IF EXISTS `add_cont`;
@@ -280,10 +276,6 @@ CREATE TABLE `add_cont`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
--- Records of add_cont
--- ----------------------------
-
--- ----------------------------
 -- Table structure for admission_req
 -- ----------------------------
 DROP TABLE IF EXISTS `admission_req`;
@@ -293,10 +285,6 @@ CREATE TABLE `admission_req`  (
   `si_id` int(11) NOT NULL,
   PRIMARY KEY (`ad_req_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of admission_req
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for capstone
@@ -519,10 +507,6 @@ CREATE TABLE `excel_pers_info`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
--- Records of excel_pers_info
--- ----------------------------
-
--- ----------------------------
 -- Table structure for excel_publish
 -- ----------------------------
 DROP TABLE IF EXISTS `excel_publish`;
@@ -573,11 +557,22 @@ CREATE TABLE `file_uploads`  (
   `file_location` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'plugins\\images\\no-image.jpg',
   `si_id` int(11) NOT NULL,
   PRIMARY KEY (`file_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of file_uploads
 -- ----------------------------
+INSERT INTO `file_uploads` VALUES (1, 'file_uploads/payment_attachments/1.png', 1);
+INSERT INTO `file_uploads` VALUES (2, 'file_uploads/payment_attachments/2.jpg', 2);
+INSERT INTO `file_uploads` VALUES (3, 'file_uploads/payment_attachments/3.png', 3);
+INSERT INTO `file_uploads` VALUES (4, 'file_uploads/payment_attachments/4.jpg', 4);
+INSERT INTO `file_uploads` VALUES (5, 'file_uploads/payment_attachments/5.jpg', 5);
+INSERT INTO `file_uploads` VALUES (6, 'file_uploads/payment_attachments/6.png', 6);
+INSERT INTO `file_uploads` VALUES (7, 'file_uploads/payment_attachments/7.png', 7);
+INSERT INTO `file_uploads` VALUES (8, 'file_uploads/payment_attachments/8.jpg', 8);
+INSERT INTO `file_uploads` VALUES (9, 'file_uploads/payment_attachments/9.jpg', 9);
+INSERT INTO `file_uploads` VALUES (10, 'file_uploads/payment_attachments/10.png', 10);
+INSERT INTO `file_uploads` VALUES (11, 'file_uploads/payment_attachments/11.png', 11);
 
 -- ----------------------------
 -- Table structure for history
@@ -822,10 +817,6 @@ CREATE TABLE `message_reply`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
--- Records of message_reply
--- ----------------------------
-
--- ----------------------------
 -- Table structure for mission
 -- ----------------------------
 DROP TABLE IF EXISTS `mission`;
@@ -857,10 +848,6 @@ CREATE TABLE `news_info`  (
   `ac_id` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`news_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of news_info
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for oad
@@ -1065,10 +1052,6 @@ CREATE TABLE `science_invest`  (
 ) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
--- Records of science_invest
--- ----------------------------
-
--- ----------------------------
 -- Table structure for ssg_info
 -- ----------------------------
 DROP TABLE IF EXISTS `ssg_info`;
@@ -1143,10 +1126,6 @@ CREATE TABLE `stud_ad`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
--- Records of stud_ad
--- ----------------------------
-
--- ----------------------------
 -- Table structure for stud_serv_div
 -- ----------------------------
 DROP TABLE IF EXISTS `stud_serv_div`;
@@ -1210,11 +1189,21 @@ CREATE TABLE `student_info`  (
   `verification` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT 'Pending',
   `date_created` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`si_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 12 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
 -- Records of student_info
 -- ----------------------------
+INSERT INTO `student_info` VALUES (1, 'college', '2020-2021 1st', 'New', 'BSIT', 'test', 'test', 'test', 'test', '0000-00-00', 'male', 'Single', 'test', 'test', 'test', 'test', 'test', 0, 'test', 'test', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Verified', '2020-05-17 20:34:42');
+INSERT INTO `student_info` VALUES (2, 'college', '2020-2021 1st', 'New', 'BSBA - FM', '2', '2', '2', '2', '0000-00-00', 'male', 'Single', '2', '2', '2', '2', '2', 2, '2', '2', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Verified', '2020-05-19 20:34:44');
+INSERT INTO `student_info` VALUES (3, 'college', '2020-2021 1st', 'New', 'BSIT', '3', '3', '3', '3', '0000-00-00', 'female', 'Single', '3', '3', '3', '3', '3', 3, '3', '3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Verified', '2020-05-20 20:34:46');
+INSERT INTO `student_info` VALUES (4, 'college', '2020-2021 1st', 'New', 'BSBA - FM', '3', '3', '3', '3', '0000-00-00', 'male', 'Single', '3', '3', '3', '3', '3', 3, '3', '3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Verified', '2020-05-28 20:34:47');
+INSERT INTO `student_info` VALUES (5, 'college', '2020-2021 1st', 'New', 'BSBA - FM', '3', '3', '3', '3', '0000-00-00', 'male', 'Single', '3', '3', '3', '3', '3', 3, '3', '3', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Verified', '2020-05-21 20:34:49');
+INSERT INTO `student_info` VALUES (6, 'college', '2020-2021 1st', 'New', 'BSBA - FM', '4', '4', '4', '4', '2020-05-04', 'male', 'Single', '4', '4', '4', '4', '4', 4, '4', '4', '4', '4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Verified', '2020-05-22 20:34:56');
+INSERT INTO `student_info` VALUES (7, 'college', '2020-2021 1st', 'New', 'BSBA - FM', '4', '4', '4', '4', '2020-05-04', 'male', 'Single', '4', '4', '4', '4', '4', 4, '4', '4', '4', '4', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Verified', '2020-05-28 20:34:51');
+INSERT INTO `student_info` VALUES (8, 'seniorhigh', '2020-2021 1st', 'Transferee', 'GAS', 'name', 'name', 'name', 'name', '2020-05-08', 'male', 'Single', 'name', 'name', 'name', 'name', 'name', 0, 'name', 'name', 'name', 'name', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Pending', '2020-05-28 20:34:54');
+INSERT INTO `student_info` VALUES (9, 'seniorhigh', '2020-2021 1st', 'Old', 'ABM', 'sad', 'sad', 'sad', 'sad', '2020-05-20', 'male', 'Single', '', '', '', '', '', 0, 'sad', 'sda', 'sad', 'sad', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Pending', '2020-05-28 20:34:53');
+INSERT INTO `student_info` VALUES (11, 'college', '2020-2021 1st', 'New', 'BSBA - FM', '5', '5', '5', '5', '1998-05-05', 'male', 'Single', '', '5', '5', '5', '5', 5, '5', '5', '5', '5', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Verified', '2020-05-26 20:35:51');
 
 -- ----------------------------
 -- Table structure for thesis
@@ -1232,10 +1221,6 @@ CREATE TABLE `thesis`  (
   INDEX `account_thesis`(`ac_id`) USING BTREE,
   CONSTRAINT `account_thesis` FOREIGN KEY (`ac_id`) REFERENCES `account` (`ac_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
-
--- ----------------------------
--- Records of thesis
--- ----------------------------
 
 -- ----------------------------
 -- Table structure for vision
