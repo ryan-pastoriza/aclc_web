@@ -115,11 +115,11 @@
 			
 			<div class="admission-main mb-30">
 				<div class="row">
-					<div class="col-md-20 pr-0">
+					<div class="col-md-20 pr-0" style="margin-top: 10px">
 						<div class="activity-sched bg-white ptb-15">
 							<div class="calendar-activity oh mb-30">
 								<div class="head oh bb pb-10">
-									<div class="col-md-8">
+									<div class="col-md-24">
 										<h3 class="normal c-gray f-20 mb-10 pull-left">Pre - Registration</h3>
 									</div>
 									<div class="col-md-16">
@@ -141,6 +141,27 @@
 							<div class="row">
 								<form action="<?= base_url('index.php/public/pre_registration/register');?>" id="reg_form" class="form-horizontal" data-toggle="validator" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 									
+									<div class="col-md-24">
+										<div class="form-group">
+										    <label for="course" class="c-gray" style="font-weight:normal;">Course</label>
+										    <select name="course" class="form-control" id="course" style="margin-top:-6px;">
+										    	<option class="college_form" disabled>4 Year Degree Course</option>
+										    	<option class="college_form" value="BSBA - FM">BSBA - Financial Management</option>
+										    	<option class="college_form" value="BSBA - MM">BSBA - Marketing Management</option>
+										    	<option class="college_form" value="BSCS">BS Computer Science</option>
+										    	<option class="college_form" value="BSIT">BS Information Technology</option>
+										    	<option class="college_form" disabled>3 Year Diploma Program</option>
+										    	<option class="college_form" value="3YD-CT">3 Year Diploma Progam in Computer Technology</option>
+										    	<option class="college_form" value="3YD-ICT">3 Year Diploma Progam in Information and Communication Technology</option>
+										    	<option class="college_form" value="3YD-SADT">3 Year Diploma Progam in Software Application & Development Technology</option>
+										    	<option class="college_form" value="3YD-TCST">3 Year Diploma Progam in Telecommunications & Computer Servicing Technology</option>
+										    	<option class="sh_form hidden" value="STEM">STEM</option>
+										    	<option class="sh_form hidden" value="GAS">GAS</option>
+										    	<option class="sh_form hidden" value="ABM">ABM</option>
+										    	<option class="sh_form hidden" value="TVL - ICT CSS">TVL - ICT CSS</option>
+										    </select>
+										</div>
+									</div>
 									<h5 class="c-gray" style="font-weight: bold;margin-left:15px;margin-top:-10px;">Personal Information</h5>
 								
 									<div class="row">
@@ -174,10 +195,8 @@
 											<li class="c-gray col-md-24" style="font-weight: bold;margin-left:10px; margin-right:10px;">
 												Biographical History
 											</li>
-											<li style="width:100% !important;">
-												<hr>
-											</li>
 										</ul>
+										<hr>
 										<div class="col-md-8">
 											<div class="form-group">
 											    <label for="date_of_birth" class="c-gray" style="font-weight:normal;">Birth Date</label>
@@ -203,16 +222,27 @@
 											    </select>
 											</div>
 										</div>
+										<div class="col-md-8">
+											<div class="form-group">
+											    <label for="last_school_attended" class="c-gray" style="font-weight:normal;">Last School Attended</label>
+											    <input type="text" class="form-control" id="last_school_attended" name="date_of_birth" style="margin-top:-6px;" required>
+											</div>
+										</div>
+										<div class="col-md-8">
+											<div class="form-group">
+											    <label for="last_school_attended_year" class="c-gray" style="font-weight:normal;">Last School Attended Year</label>
+											    <input type="text" class="form-control" id="last_school_attended_year" name="date_of_birth_year" style="margin-top:-6px;" required>
+											</div>
+										</div>
 									</div>
 									<div class="row">
+										<hr>
 										<ul style="display:flex !important;align-items: center;margin-top:-10px;width: 100%;">
 											<li class="c-gray col-md-24" style="font-weight: bold;margin-left:10px; margin-right:10px;">
 												Contact Information
 											</li>
-											<li style="width:100% !important;">
-												<hr >
-											</li>
 										</ul>
+										<hr>
 										<div class="col-md-8">
 											<div class="form-group">
 											    <label for="street_purok" class="c-gray" style="font-weight:normal;">Street/Purok</label>
@@ -267,51 +297,21 @@
 										</div>
 									</div>
 									<div class="row">
-										<ul style="display:flex !important;align-items: center;margin-top:-10px;width: 100%;">
-											<li class="c-gray col-md-24" style="font-weight: bold;margin-left:10px; margin-right:10px;">
-												Preferred Course
-											</li>
-											<li style="width:100% !important;">
-												<hr >
-											</li>
-										</ul>
-										<div class="col-md-24">
-											<div class="form-group">
-											    <label for="course" class="c-gray" style="font-weight:normal;">Course</label>
-											    <select name="course" class="form-control" id="course" style="margin-top:-6px;">
-											    	<option class="college_form" disabled>4 Year Degree Course</option>
-											    	<option class="college_form" value="BSBA - FM">BSBA - Financial Management</option>
-											    	<option class="college_form" value="BSBA - MM">BSBA - Marketing Management</option>
-											    	<option class="college_form" value="BSCS">BS Computer Science</option>
-											    	<option class="college_form" value="BSIT">BS Information Technology</option>
-											    	<option class="college_form" disabled>3 Year Diploma Program</option>
-											    	<option class="college_form" value="3YD-CT">3 Year Diploma Progam in Computer Technology</option>
-											    	<option class="college_form" value="3YD-ICT">3 Year Diploma Progam in Information and Communication Technology</option>
-											    	<option class="college_form" value="3YD-SADT">3 Year Diploma Progam in Software Application & Development Technology</option>
-											    	<option class="college_form" value="3YD-TCST">3 Year Diploma Progam in Telecommunications & Computer Servicing Technology</option>
-											    	<option class="sh_form hidden" value="STEM">STEM</option>
-											    	<option class="sh_form hidden" value="GAS">GAS</option>
-											    	<option class="sh_form hidden" value="ABM">ABM</option>
-											    	<option class="sh_form hidden" value="TVL - ICT CSS">TVL - ICT CSS</option>
-											    </select>
-											</div>
-										</div>
-									</div>
-									<div class="row">
 										<!-- <button class="btn btn-danger pull-right" style="margin-right:5px;">Cancel</button> -->
 										<!-- <button class="btn btn-warning pull-right" style="margin-right:5px;">Save &amp; Queue</button> -->
-										<button class="btn btn-success pull-right" style="margin-right:5px;">Register</button>
+										<!-- <button class="btn btn-success pull-right" style="margin-right:5px;">Register</button> -->
 									</div>
 								</form>
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 pr-0">
+					<div class="col-md-4 pr-0" style="margin-top: 10px;">
 						<div class="activity-sched bg-white ptb-15">
-							<div class="admission-leftpane bg-white">
-								<div class="head-blue ptb-10 c-gray">
-									<h4 style="font-weight:normal;">Admission Requirements</h4>
-									<hr style="margin-top:-5px">
+							<div class="calendar-activity oh mb-30">
+								<div class="head oh bb pb-10">
+									<div class="col-md-24">
+										<h4 style="font-weight:normal;">Admission Requirements</h4>
+									</div>
 								</div>
 							</div>
 							<div class="row">
@@ -386,6 +386,17 @@
 								</div>
 							</div>
 							
+						</div>
+					</div>
+					<div class="col-md-24 pr-0" style="margin-top: 10px;">
+						<div class="activity-sched bg-white ptb-15">
+							<!-- <div class="calendar-activity oh mb-30"> -->
+								<div class="head oh ">
+									<div class="col-md-24">
+										<button form="reg_form" class="btn btn-success pull-right" style="margin-right:5px;">Register</button>
+									</div>
+								<!-- </div> -->
+							<!-- </div> -->
 						</div>
 					</div>
 				</div>

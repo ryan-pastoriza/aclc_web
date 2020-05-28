@@ -9,7 +9,7 @@
 /**
  * 
  */
-
+defined('BASEPATH') OR exit('No direct script access allowed');
 class Pre_Registration extends CI_Controller{
 
 	public function index(){
@@ -33,6 +33,7 @@ class Pre_Registration extends CI_Controller{
 		echo "</pre>";
 		$reg->type = $this->input->post('type');
 		$reg->status = $this->input->post('status');
+		$reg->school_year_sem = $this->input->post('school_year_sem');
 		$reg->course = $this->input->post('course');
 		$reg->first_name = $this->input->post('first_name');
 		$reg->middle_name = $this->input->post('middle_name');
@@ -129,5 +130,5 @@ class Pre_Registration extends CI_Controller{
     public function for_verification(){
 		$this->load->view('public/pre_registration_verification');
     }
-
+    
 }

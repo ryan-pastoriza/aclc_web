@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost
+ Source Server         : Local Connection
  Source Server Type    : MySQL
  Source Server Version : 100138
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 100138
  File Encoding         : 65001
 
- Date: 23/05/2020 14:27:25
+ Date: 28/05/2020 15:23:24
 */
 
 SET NAMES utf8mb4;
@@ -262,6 +262,10 @@ CREATE TABLE `account`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
+-- Records of account
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for add_cont
 -- ----------------------------
 DROP TABLE IF EXISTS `add_cont`;
@@ -276,6 +280,10 @@ CREATE TABLE `add_cont`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
+-- Records of add_cont
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for admission_req
 -- ----------------------------
 DROP TABLE IF EXISTS `admission_req`;
@@ -284,7 +292,11 @@ CREATE TABLE `admission_req`  (
   `file_location` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `si_id` int(11) NOT NULL,
   PRIMARY KEY (`ad_req_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of admission_req
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for capstone
@@ -507,6 +519,10 @@ CREATE TABLE `excel_pers_info`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
+-- Records of excel_pers_info
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for excel_publish
 -- ----------------------------
 DROP TABLE IF EXISTS `excel_publish`;
@@ -557,7 +573,11 @@ CREATE TABLE `file_uploads`  (
   `file_location` varchar(255) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL DEFAULT 'plugins\\images\\no-image.jpg',
   `si_id` int(11) NOT NULL,
   PRIMARY KEY (`file_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 34 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = utf8 COLLATE = utf8_unicode_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of file_uploads
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for history
@@ -802,6 +822,10 @@ CREATE TABLE `message_reply`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
+-- Records of message_reply
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for mission
 -- ----------------------------
 DROP TABLE IF EXISTS `mission`;
@@ -833,6 +857,10 @@ CREATE TABLE `news_info`  (
   `ac_id` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   PRIMARY KEY (`news_id`) USING BTREE
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of news_info
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for oad
@@ -1037,6 +1065,10 @@ CREATE TABLE `science_invest`  (
 ) ENGINE = MyISAM AUTO_INCREMENT = 2 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
+-- Records of science_invest
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for ssg_info
 -- ----------------------------
 DROP TABLE IF EXISTS `ssg_info`;
@@ -1111,6 +1143,10 @@ CREATE TABLE `stud_ad`  (
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
 
 -- ----------------------------
+-- Records of stud_ad
+-- ----------------------------
+
+-- ----------------------------
 -- Table structure for stud_serv_div
 -- ----------------------------
 DROP TABLE IF EXISTS `stud_serv_div`;
@@ -1143,6 +1179,7 @@ DROP TABLE IF EXISTS `student_info`;
 CREATE TABLE `student_info`  (
   `si_id` int(11) NOT NULL AUTO_INCREMENT,
   `type` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `school_year_sem` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `status` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `course` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `first_name` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
@@ -1160,6 +1197,8 @@ CREATE TABLE `student_info`  (
   `postalcode` int(5) NULL DEFAULT NULL,
   `phone` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `email` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `last_school_attended` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `last_school_attended_year` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `juniorhighcard` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `gmc` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
   `ncae` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
@@ -1171,7 +1210,11 @@ CREATE TABLE `student_info`  (
   `verification` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT 'Pending',
   `date_created` datetime(0) NULL DEFAULT CURRENT_TIMESTAMP(0),
   PRIMARY KEY (`si_id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 54 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of student_info
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for thesis
@@ -1189,6 +1232,10 @@ CREATE TABLE `thesis`  (
   INDEX `account_thesis`(`ac_id`) USING BTREE,
   CONSTRAINT `account_thesis` FOREIGN KEY (`ac_id`) REFERENCES `account` (`ac_id`) ON DELETE RESTRICT ON UPDATE RESTRICT
 ) ENGINE = InnoDB AUTO_INCREMENT = 1 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Compact;
+
+-- ----------------------------
+-- Records of thesis
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for vision
