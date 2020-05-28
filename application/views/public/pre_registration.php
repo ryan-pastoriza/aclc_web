@@ -222,7 +222,7 @@
 											    </select>
 											</div>
 										</div>
-										<div class="col-md-8">
+										<div class="col-md-16">
 											<div class="form-group">
 											    <label for="last_school_attended" class="c-gray" style="font-weight:normal;">Last School Attended</label>
 											    <input type="text" class="form-control" id="last_school_attended" name="date_of_birth" style="margin-top:-6px;" required>

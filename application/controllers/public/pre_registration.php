@@ -42,6 +42,8 @@ class Pre_Registration extends CI_Controller{
 		$reg->date_of_birth = $this->input->post('date_of_birth');
 		$reg->gender = $this->input->post('gender');
 		$reg->marital_status = $this->input->post('marital_status');
+		$reg->last_school_attended = $this->input->post('last_school_attended');
+		$reg->last_school_attended_year = $this->input->post('last_school_attended_year');
 		$reg->street_purok = $this->input->post('street_purok');
 		$reg->barangay = $this->input->post('barangay');
 		$reg->municipality = $this->input->post('municipality');
