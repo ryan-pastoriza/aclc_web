@@ -56,7 +56,6 @@
   				$('.transferee_college').removeClass('hidden');
   				$('.new_college').addClass('hidden');
   			}
-
   		})
   	})
   </script>
@@ -145,12 +144,12 @@
 										<div class="form-group">
 										    <label for="course" class="c-gray" style="font-weight:normal;">Course</label>
 										    <select name="course" class="form-control" id="course" style="margin-top:-6px;">
-										    	<option class="college_form" disabled>4 Year Degree Course</option>
+										    	<option class="college_form" disabled>--------4 Year Degree Course--------</option>
 										    	<option class="college_form" value="BSBA - FM">BSBA - Financial Management</option>
 										    	<option class="college_form" value="BSBA - MM">BSBA - Marketing Management</option>
 										    	<option class="college_form" value="BSCS">BS Computer Science</option>
 										    	<option class="college_form" value="BSIT">BS Information Technology</option>
-										    	<option class="college_form" disabled>3 Year Diploma Program</option>
+										    	<option class="college_form" disabled>--------3 Year Diploma Program--------</option>
 										    	<option class="college_form" value="3YD-CT">3 Year Diploma Progam in Computer Technology</option>
 										    	<option class="college_form" value="3YD-ICT">3 Year Diploma Progam in Information and Communication Technology</option>
 										    	<option class="college_form" value="3YD-SADT">3 Year Diploma Progam in Software Application & Development Technology</option>
@@ -225,13 +224,13 @@
 										<div class="col-md-16">
 											<div class="form-group">
 											    <label for="last_school_attended" class="c-gray" style="font-weight:normal;">Last School Attended</label>
-											    <input type="text" class="form-control" id="last_school_attended" name="date_of_birth" style="margin-top:-6px;" required>
+											    <input type="text" class="form-control" id="last_school_attended" name="last_school_attended" style="margin-top:-6px;" required>
 											</div>
 										</div>
 										<div class="col-md-8">
 											<div class="form-group">
 											    <label for="last_school_attended_year" class="c-gray" style="font-weight:normal;">Last School Attended Year</label>
-											    <input type="text" class="form-control" id="last_school_attended_year" name="date_of_birth_year" style="margin-top:-6px;" required>
+											    <input type="text" class="form-control" id="last_school_attended_year" name="last_school_attended_year" style="margin-top:-6px;" required>
 											</div>
 										</div>
 									</div>

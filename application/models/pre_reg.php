@@ -40,8 +40,8 @@ class Pre_Reg extends MY_Model {
     public $birthcert;
     public $seniorhighcard;
     public $tor;
+    public $honorable_dismissal;
+    public $brown_enve;
     public $date_created;
-
-
+    public $verification;
 }
-        
