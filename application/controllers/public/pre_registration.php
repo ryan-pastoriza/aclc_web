@@ -31,8 +31,8 @@ class Pre_Registration extends CI_Controller{
         // $sch->db->limit(10);
         // $getSch = $sch->get();
 
-    	$reg->db->where(['first_name'=> $this->input->post('first_name'),'middle_name'=> $this->input->post('middle_name'),'last_name'=> $this->input->post('last_name'),'school_year_sem'=>$currentSY]);
-    	$sameUser = sizeof( $reg->get() );
+    	// $reg->db->where(['first_name'=> $this->input->post('first_name'),'middle_name'=> $this->input->post('middle_name'),'last_name'=> $this->input->post('last_name'),'school_year_sem'=>$currentSY]);
+    	// $sameUser = sizeof( $reg->get() );
 		// var_dump( $reg->search(['first_name'=> $this->input->post('first_name'),'middle_name'=> $this->input->post('middle_name'),'last_name'=> $this->input->post('last_name'),]) );
 
 		// var_dump( $this->input->post() );
@@ -40,7 +40,8 @@ class Pre_Registration extends CI_Controller{
 		// var_dump( $reg );
 
 		echo "</pre>";
-		if( $sameUser <= 0 ){
+		// if( $sameUser <= 0 ){
+			$reg = new Pre_Reg;
 			$reg->type = $this->input->post('type');
 			$reg->status = $this->input->post('status');
 			$reg->school_year_sem = '2020-2021 1st';
@@ -70,8 +71,8 @@ class Pre_Registration extends CI_Controller{
 			$reg->tor = $this->input->post('tor');
 			$reg->honorable_dismissal = $this->input->post('honorable_dismissal');
 			$reg->brown_enve = $this->input->post('brown_enve');
-			$reg->verification = 'Pending';
-			$reg->date_created = date("Y-m-d H:i:s");;
+			// $reg->verification = 'Pending';
+			// $reg->date_created = date("Y-m-d H:i:s");;
 		    $reg->save();
 
 			$fileloc = $this->upload_payment($reg->si_id,'pay_attach');
@@ -107,10 +108,10 @@ class Pre_Registration extends CI_Controller{
 		    // $this->for_verification();
 
 	     	redirect('/public/pre_registration/for_verification', 'refresh');
-    	}else{
-     		redirect('/public/pre_registration/already_registered', 'refresh');
+    	// }else{
+     // 		redirect('/public/pre_registration/already_registered', 'refresh');
 
-    	}
+    	// }
 	}
 
     public function upload_payment($name, $fileName='userfile'){

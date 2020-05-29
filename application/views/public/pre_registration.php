@@ -7,16 +7,6 @@
  * @Last Modified time: 2019-05-03 16:54:46
  */
 ?>
-<?php
-
-/**
- * @Author: Gian
- * @Date:   2018-07-18 08:16:20
- * @Last Modified by:   Gian
- * @Last Modified time: 2018-08-15 13:51:38
- */
-?>
-<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>ACLC</title>
@@ -114,6 +104,95 @@
 			
 			<div class="admission-main mb-30">
 				<div class="row">
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-24 pr-0" style="margin-top: 10px;">
+								<div class="activity-sched bg-white ptb-15">
+									<div class="calendar-activity oh mb-30">
+										<div class="head oh bb pb-10">
+											<div class="col-md-24">
+												<h4 class="normal c-gray f-20 mb-10 pull-left">Payment Attachment</h4>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<p style="color: red;">To proceed please prepare and Entrance Fee of 3,200.00. Pay to nearest PALAWAN, LHUILLIER, or CEBUANA LHUILLIER in your area and sent to JOVANIE P. ECLEO Cellphone# 0909-613-3719</p>
+										<h5 style="color: red;">Please take a clear picture of the MONEY TRANSFER RECEIPT and upload it here. </h5>
+										<div class="reg_form-parts" >
+											<input type="file" form="reg_form" name="pay_attach" value="Upload Requirements" class="pull-left" required>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-24 pr-0" style="margin-top: 10px;">
+								<div class="activity-sched bg-white ptb-15">
+									<div class="calendar-activity oh mb-30">
+										<div class="head oh bb pb-10">
+											<div class="col-md-24">
+												<h4 style="font-weight:normal;">Admission Requirements</h4>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<p style="color: red; ">Check if present and upload image</p>
+										<div class="new_college college_form">
+											<div class="row">
+												<div class="col-md-offset-2 col-md-32">
+													<input type="checkbox" name="seniorhighcard" form="reg_form"> Senior High School Card (Form 138-A)
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-offset-2 col-md-32">
+													<input type="checkbox" name="brown_enve" form="reg_form"> 1 Long Brown Envelope
+												</div>
+											</div>
+										</div>
+										<div class="transferee_college college_form hidden">
+											<div class="row">
+												<div class="col-md-offset-2 col-md-32">
+													<input type="checkbox" name="tor" form="reg_form"> Transcript of Records
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-offset-2 col-md-32">
+													<input type="checkbox" name="honorable_dismissal" form="reg_form"> Honorable Dismissal
+												</div>
+											</div>
+										</div>
+										<div class="sh_form hidden">
+											<div class="row">
+												<div class="col-md-offset-2 col-md-32">
+													<input type="checkbox" name="juniorhighcard" form="reg_form"> Junior High School Card(Form 138)
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-md-offset-2 col-md-32">
+													<input type="checkbox" name="ncae" form="reg_form"> NCAE Result
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-offset-2 col-md-32">
+												<input type="checkbox" name="gmc" form="reg_form"> Good Moral Character Certificate
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-offset-2 col-md-32">
+												<input type="checkbox" name="birthcert" form="reg_form"> 2 Photocopies of NSO Birth Certificate
+											</div>
+										</div>
+
+										<div class="row">
+											<input type="file" multiple="multiple" form="reg_form" name="admission_req[]" value="Upload Requirements" class="pull-left">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
 					<div class="col-md-20 pr-0" style="margin-top: 10px">
 						<div class="activity-sched bg-white ptb-15">
 							<div class="calendar-activity oh mb-30">
@@ -304,89 +383,10 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 pr-0" style="margin-top: 10px;">
-						<div class="activity-sched bg-white ptb-15">
-							<div class="calendar-activity oh mb-30">
-								<div class="head oh bb pb-10">
-									<div class="col-md-24">
-										<h4 style="font-weight:normal;">Admission Requirements</h4>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<p style="color: red; ">Check if present and upload image</p>
-								<div class="new_college college_form">
-									<div class="row">
-										<div class="col-md-offset-2 col-md-32">
-											<input type="checkbox" name="seniorhighcard" form="reg_form"> Senior High School Card (Form 138-A)
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-offset-2 col-md-32">
-											<input type="checkbox" name="brown_enve" form="reg_form"> 1 Long Brown Envelope
-										</div>
-									</div>
-								</div>
-								<div class="transferee_college college_form hidden">
-									<div class="row">
-										<div class="col-md-offset-2 col-md-32">
-											<input type="checkbox" name="tor" form="reg_form"> Transcript of Records
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-offset-2 col-md-32">
-											<input type="checkbox" name="honorable_dismissal" form="reg_form"> Honorable Dismissal
-										</div>
-									</div>
-								</div>
-								<div class="sh_form hidden">
-									<div class="row">
-										<div class="col-md-offset-2 col-md-32">
-											<input type="checkbox" name="juniorhighcard" form="reg_form"> Junior High School Card(Form 138)
-										</div>
-									</div>
-									<div class="row">
-										<div class="col-md-offset-2 col-md-32">
-											<input type="checkbox" name="ncae" form="reg_form"> NCAE Result
-										</div>
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-offset-2 col-md-32">
-										<input type="checkbox" name="gmc" form="reg_form"> Good Moral Character Certificate
-									</div>
-								</div>
-								<div class="row">
-									<div class="col-md-offset-2 col-md-32">
-										<input type="checkbox" name="birthcert" form="reg_form"> 2 Photocopies of NSO Birth Certificate
-									</div>
-								</div>
 
-								<div class="row">
-									<input type="file" multiple="multiple" form="reg_form" name="admission_req[]" value="Upload Requirements" class="pull-left">
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-md-4 pr-0" style="margin-top: 10px;">
-						<div class="activity-sched bg-white ptb-15">
-							<div class="calendar-activity oh mb-30">
-								<div class="head oh bb pb-10">
-									<div class="col-md-24">
-										<h4 class="normal c-gray f-20 mb-10 pull-left">Payment Attachment</h4>
-									</div>
-								</div>
-							</div>
-							<div class="row">
-								<p style="color: red;">To proceed please prepare and Entrance Fee of 3,200.00. Pay to nearest PALAWAN, LHUILLIER, or CEBUANA LHUILLIER in your area and sent to JOVANIE P. ECLEO Cellphone# 0909-613-3719</p>
-								<h5 style="color: red;">Please take a clear picture of the MONEY TRANSFER RECEIPT and upload it here. </h5>
-								<div class="reg_form-parts" >
-									<input type="file" form="reg_form" name="pay_attach" value="Upload Requirements" class="pull-left" required>
-								</div>
-							</div>
-							
-						</div>
-					</div>
+				</div>
+				<div class="row">
+
 					<div class="col-md-24 pr-0" style="margin-top: 10px;">
 						<div class="activity-sched bg-white ptb-15">
 							<!-- <div class="calendar-activity oh mb-30"> -->
@@ -398,6 +398,7 @@
 							<!-- </div> -->
 						</div>
 					</div>
+
 				</div>
 
 			</div>

@@ -16,6 +16,7 @@ class Pre_Reg extends MY_Model {
     public $type;
     public $status;
     public $school_year_sem;
+    public $school_id;
     public $last_school_attended;
     public $last_school_attended_year;
     public $course;
